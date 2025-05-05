@@ -33,7 +33,7 @@ let score = JSON.parse(localStorage.getItem
             if(computerMove === 'Rock'){
                 result = 'You won!';
             }else if(computerMove === 'Paper'){
-                result = 'Tie';
+                result = 'Tie.';
             }else{
                 result = 'You lose.';
             }
@@ -41,7 +41,7 @@ let score = JSON.parse(localStorage.getItem
 
         if(result === 'You won!'){
             score.wins += 1;
-        }else if(result == 'You lose.'){
+        }else if(result === 'You lose.'){
             score.losses += 1;
         }else{
             score.ties += 1;
@@ -54,9 +54,10 @@ let score = JSON.parse(localStorage.getItem
         document.querySelector('.js-result').innerHTML = result;
 
         document.querySelector('.js-moves').innerHTML = `You
-    <img src="images/${playerMove.toLowerCase()}-emoji.png" class="move">
-    <img src="images/${computerMove.toLowerCase()}-emoji.png" class="move">
-    Computer `;
+<img src="images/${playerMove.toLowerCase()}-emoji.png" class="move">
+<img src="images/${computerMove.toLowerCase()}-emoji.png" class="move">
+Computer `;
+
 
     }
 
