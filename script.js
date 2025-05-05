@@ -17,7 +17,7 @@ let score = JSON.parse(localStorage.getItem
             }else if(computerMove === 'Paper'){
                 result = 'You won!';
             }else{
-                result = 'Tie';
+                result = 'Tie.';
             }
 
         }else if(playerMove === 'Rock'){
@@ -39,7 +39,7 @@ let score = JSON.parse(localStorage.getItem
             }
         }
 
-        if(result == 'You won!'){
+        if(result === 'You won!'){
             score.wins += 1;
         }else if(result == 'You lose.'){
             score.losses += 1;
